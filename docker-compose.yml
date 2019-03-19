@@ -17,5 +17,7 @@ services:
     build: ./nginx
     ports:
       - 8080:80
+    volumes:
+      - ./nginx:/etc/nginx
     depends_on:
       - api
