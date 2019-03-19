@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .api:/home/project/app
+      - ./api:/home/project/app
     command: gunicorn -w 1 -b :8000 app:app
   server:
     container_name: server_nginx
